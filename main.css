@@ -1,0 +1,36 @@
+html {
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: #0f3c4b;
+    background-color: #e5edf1;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box {
+    font-size: 1.25rem;
+    background-color: #c8dadf;
+    position: relative;
+    padding: 20px;
+    width: 50px;
+}
+
+.box.has-advanced-upload {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+}
+
+.box.has-advanced-upload .box__icon {
+    fill: #92b0b3;
+    display: block;
+}
+
+img {
+    width: 100%;
+}

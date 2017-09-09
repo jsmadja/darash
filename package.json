@@ -1,10 +1,11 @@
 {
-  "name": "darach",
+  "name": "darash",
   "version": "1.0.0",
   "description": "",
-  "main": "darash.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon index"
+    "start": "electron .",
+    "package": "electron-packager --overwrite . && electron-installer-dmg darash-darwin-x64 Darash"
   },
   "author": "Julien Smadja <julien.smadja@gmail.com>",
   "license": "MIT",
@@ -14,6 +15,8 @@
     "save-pixels": "2.3.4"
   },
   "devDependencies": {
-    "nodemon": "1.12.0"
+    "electron": "~1.6.2",
+    "electron-installer-dmg": "^0.2.1",
+    "electron-packager": "^9.0.1"
   }
 }

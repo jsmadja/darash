@@ -1,4 +1,6 @@
 .idea/
+darash-darwin-x64/
+image.png_*
 # Logs
 logs
 *.log
@@ -6,6 +8,7 @@ analyzed*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+Darash.dmg
 
 # Runtime data
 pids
