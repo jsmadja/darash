@@ -1,8 +1,6 @@
-# darash
+# How to install
 
-## How to install
-
-### Install NodeJS
+## Install NodeJS
 
 Download package from [Official WebSite](https://nodejs.org/en/)
 
