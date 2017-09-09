@@ -15,7 +15,7 @@ Install dependencies
 > npm install --production
 
 Execute darash on a PNG (result is stored in **analyzed_**image.png)
-> ./darash image.png
+> node darash image.png
 
 See result 
 > open analyzed_image.png
