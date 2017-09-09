@@ -6,6 +6,8 @@
 
 Download package from [Official WebSite](https://nodejs.org/en/)
 
+## Open a Terminal
+
 ### Clone repository
 ```
 git clone https://github.com/jsmadja/darash.git
