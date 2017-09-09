@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "get-pixels": "3.3.0",
+    "lodash": "^4.17.4",
     "save-pixels": "2.3.4"
   },
   "devDependencies": {
