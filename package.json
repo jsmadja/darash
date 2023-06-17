@@ -10,13 +10,14 @@
   "author": "Julien Smadja <julien.smadja@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "get-pixels": "3.3.0",
+    "get-pixels": "^3.3.3",
+    "install": "^0.13.0",
     "lodash": "^4.17.4",
-    "save-pixels": "2.3.4"
+    "save-pixels": "^2.3.6"
   },
   "devDependencies": {
-    "electron": "~1.6.2",
-    "electron-installer-dmg": "^0.2.1",
-    "electron-packager": "^9.0.1"
+    "electron": "^25.1.1",
+    "electron-installer-dmg": "^4.0.0",
+    "electron-packager": "^17.1.1"
   }
 }

@@ -1,6 +1,3 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
 const getPixels = require("get-pixels");
 const savePixels = require("save-pixels");
 const fs = require('fs');
@@ -80,27 +77,30 @@ class Image {
 
 }
 
-document.ondragover = document.ondrop = (ev) => {
-    ev.preventDefault()
-};
+window.addEventListener('DOMContentLoaded', () => {
+    document.ondragover = document.ondrop = (ev) => {
+        ev.preventDefault()
+    };
 
-document.body.ondrop = (ev) => {
-    ev.preventDefault();
-    ev.stopPropagation();
-    ev.stopImmediatePropagation();
-    const src = ev.dataTransfer.files[0].path;
-    getPixels(src, (err, img) => {
-        if (err) {
-            throw new Error('Bad image path: ' + err.message);
-        }
-        new Image(img).detectErrors();
-        const out = new Date().getTime();
-        const dest = src + '_' + out + '.png';
-        savePixels(img, "png").pipe(fs.createWriteStream(dest));
-        setTimeout(() => {
-            document.getElementById('result').src = dest;
-            document.getElementById('result-link').href = dest;
-            document.getElementById('result').style = '{display:block;}';
-        }, 1000);
-    });
-};
+    document.ondrop = (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        ev.stopImmediatePropagation();
+        const src = ev.dataTransfer.files[0].path;
+        getPixels(src, (err, img) => {
+            if (err) {
+                throw new Error('Bad image path: ' + err.message);
+            }
+            new Image(img).detectErrors();
+            const out = new Date().getTime();
+            const dest = src + '_' + out + '.png';
+            savePixels(img, "png").pipe(fs.createWriteStream(dest));
+            setTimeout(() => {
+                document.getElementById('result').src = dest;
+                document.getElementById('result-link').href = dest;
+                document.getElementById('result').style = '{display:block;}';
+            }, 1000);
+        });
+    };
+
+})
